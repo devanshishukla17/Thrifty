@@ -1,0 +1,173 @@
+/* Full Page Container for Centering */
+.page-container {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  height: 100vh;            /* Full viewport height */
+  text-align: center;       /* Align text to the center */
+  flex-direction: column;   /* Stack elements vertically */
+}
+
+/* Profile Heading */
+.profile-heading {
+  font-size: 2.5rem;        /* Increase font size */
+  color: #800000;           /* Profile color */
+  font-weight: bold;        /* Make it bold */
+  margin-bottom: 20px;      /* Space below the heading */
+}
+
+/* Profile Page Container */
+.profile-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 20px auto;
+  gap: 30px;  /* Increase gap for spacious layout */
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Enlarged Edit Block */
+.profile-info {
+  flex: 4;  /* Larger form section */
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Enlarged User List Block */
+.user-list {
+  flex: 2;  /* Larger than before */
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+.profile-info .line {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-info label {
+  min-width: 120px;
+  color: #800000;
+  font-weight: bold;
+}
+
+.profile-info input {
+  width: calc(100% - 130px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+/* Submit Button */
+.circle {
+  display: inline-block;
+  background-color: #800000; /* Maroon color */
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+/* Prevent color change on hover for Submit button */
+.circle:hover {
+  background-color: #800000; /* Same maroon color on hover */
+  color: #fff; /* Keep the text color white */
+}
+
+/* Delete Button */
+.circle-delete-button {
+  display: inline-block;
+  background-color: #800000; /* Maroon color */
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+/* Prevent color change on hover for Delete button */
+.circle-delete-button:hover {
+  background-color: #800000; /* Same maroon color on hover */
+  color: #fff; /* Keep the text color white */
+}
+
+
+/* Profile Saved Message */
+.profile-saved-message {
+  display: none;
+  font-size: 0.9rem;
+  color: green;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e5f7e5;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.profile-saved-message.visible {
+  display: block;
+}
+
+/* User List Section */
+.user-list h3 {
+  font-size: 1.5rem;
+  color: #800000;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #800000;
+  padding-bottom: 10px;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.user-list li::before {
+  content: "•";
+  color: #800000;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.user-list li:hover {
+  background-color: #ffe5e5;
+  color: #800000;
+  cursor: pointer;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .profile-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-info, .user-list {
+    width: 100%;
+  }
+
+  .profile-info input {
+    width: 100%;
+    margin-left: 0;
+  }
+}

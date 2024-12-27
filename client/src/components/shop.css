@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+  color: #2d3748;
+  line-height: 1.6;
+  margin:0;
+}
+
+/* Layout Container */
+.flex {
+  display: flex;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+/* Update the aside styles to make it scrollable */
+aside {
+  width: 300px;
+  background: white;
+  padding: 2rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  overflow-y: auto;
+  position: sticky; /* Change from fixed to sticky */
+  top: 0;  /* Stick to top */
+}
+
+/* Rest of the CSS remains the same as before */
+
+aside h2 {
+  color: #1a202c;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Filter Sections */
+.mb-4 {
+  margin-bottom: 1.5rem;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mb-4 h5 {
+  color: #2d3748;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Filter Tags */
+.inline-flex {
+  display: inline-flex;
+  align-items: center;
+  background: #ebf4ff;
+  color: #3182ce;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin: 0.25rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.inline-flex:hover {
+  background: #bee3f8;
+}
+
+/* Checkbox Styles */
+label {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+label:hover {
+  background: #edf2f7;
+  padding-left: 0.5rem;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.75rem;
+  width: 16px;
+  height: 16px;
+}
+
+/* Range Slider */
+input[type="range"] {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: maroon;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: maroon;
+  transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+  flex: 1;
+
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  margin :0;
+}
+
+/* Product Card */
+.bg-white {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image Container */
+.p-4 {
+  padding: 1.5rem;
+}
+
+.flex.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Product Details */
+.bg-gray-50 {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.text-lg {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+/* Price and Button Container */
+.flex.justify-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.text-blue-600 {
+  color: maroon;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Add to Cart Button */
+button.bg-blue-500 {
+  background: maroon;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button.bg-blue-500:hover {
+  background: black;
+}
+
+/* Product Meta Info */
+.text-sm {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-top: 1rem;
+}
+
+.text-sm span {
+  margin-right: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  aside {
+      width: 250px;
+  }
+  
+  main {
+      margin-left: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex {
+      flex-direction: column;
+  }
+  
+  aside {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+  }
+  
+  main {
+      margin-left: 0;
+  }
+  
+  .grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
